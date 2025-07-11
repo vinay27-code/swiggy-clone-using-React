@@ -1,6 +1,7 @@
 import React, { useState } from "react"; 
 import { useSelector, useDispatch } from "react-redux";
 import { decreaseQuantity, increaseQuantity, clearCart } from "../cartStore/cartSlice";
+import { Link } from "react-router";
 
 
 export default function CheckOut() {
@@ -32,12 +33,10 @@ export default function CheckOut() {
                     <h2 className="text-2xl font-bold mb-2">Order Placed Successfully!</h2>
                     <p>Your food will be delivered soon. Thank you for ordering!</p>
                 </div>
-                <a 
-                    href="/restaurants" 
-                    className="inline-block bg-orange-500 text-white px-6 py-2 rounded-lg hover:bg-orange-600"
-                >
-                    Browse More Restaurants
-                </a>
+                <Link to={"/restaurants"}>
+                    <p className="inline-block bg-orange-500 text-white px-6 py-2 rounded-lg hover:bg-orange-600">Browse More Restaurants</p>
+                    </Link>
+                
             </div>
         );
     }
