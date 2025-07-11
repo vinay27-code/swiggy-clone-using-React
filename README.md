@@ -8,7 +8,7 @@ This project fetches **live data from Swiggy’s public APIs**, giving you real-
 ## 🚀 Live Demo
 
 🌐 [View Live on Netlify](https://delicate-froyo-bfa261.netlify.app/)  
-*(Replace with your actual URL)*
+
 
 ---
 
