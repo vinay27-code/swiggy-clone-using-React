@@ -1,0 +1,13 @@
+# dependencies
+/node_modules
+
+# build
+/dist
+
+# parcel cache
+.parcel-cache
+
+# optional OS/editor stuff
+.DS_Store
+*.log
+.env
