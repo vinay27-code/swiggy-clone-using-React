@@ -10,28 +10,27 @@ import HeaderPages from "./components/HeaderPages";
 import { Provider } from "react-redux";
 import { store } from "./cartStore/cartStore";
 import CheckOut from "./components/CheckOut";
+import Banner from "./components/Banner";
 
-
-
-
-function Index(){
-    return(
-        <>
-        <Provider store={store}>
-            <BrowserRouter>
-                <Routes>
-                    <Route path="/" element={<Home/>}/>
-                    <Route element={<HeaderPages/>}>
-                    <Route path="/restaurants" element={<RestaurantsList/>}/>
-                    <Route path="/city/delhi/:id" element={<RestaurantMenu/>}></Route>
-                    <Route path="/city/delhi/:id/search" element={<SearchFoodItems/>}></Route>
-                    </Route>
-                    <Route path="/checkOut" element={<CheckOut/>}></Route>
-                </Routes>
-            </BrowserRouter>
-        </Provider>    
-        </>
-    );
+function Index() {
+  return (
+    <Provider store={store}>
+      <div className="min-h-screen bg-white text-gray-900 font-sans">
+        <Banner />
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route element={<HeaderPages />}>
+              <Route path="/restaurants" element={<RestaurantsList />} />
+              <Route path="/city/delhi/:id" element={<RestaurantMenu />} />
+              <Route path="/city/delhi/:id/search" element={<SearchFoodItems />} />
+            </Route>
+            <Route path="/checkOut" element={<CheckOut />} />
+          </Routes>
+        </BrowserRouter>
+      </div>
+    </Provider>
+  );
 }
 
-ReactDOM.createRoot(document.getElementById('root')).render(<Index/>);
+ReactDOM.createRoot(document.getElementById('root')).render(<Index />);
